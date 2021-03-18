@@ -28,4 +28,4 @@ jobs:
           username: ${{secrets.FTP_USERNAME}}@${{secrets.FTP_SERVER}}
           password: ${{secrets.FTP_PASSWORD}}
           local-dir: ./_site/
-          server-dir: sanger/
+          # server-dir: '/' # optional subdir, must end in /
