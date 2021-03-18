@@ -7,7 +7,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      BASEURL: ''
+      BASEURL: '/sanger'
     steps:
       - uses: actions/checkout@v2
         with:
@@ -25,7 +25,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ${{secrets.FTP_SERVER}}
-          username: ${{secrets.FTP_USERNAME}}
+          username: ${{secrets.FTP_USERNAME}}@${{secrets.FTP_SERVER}}
           password: ${{secrets.FTP_PASSWORD}}
           local-dir: ./_site/
-          server-dir: ''
+          server-dir: sanger/
