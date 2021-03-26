@@ -6,8 +6,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      BASEURL: '/sanger'
+    # env:
+      # BASEURL: '/' # optional, must start with / but not end with /
     steps:
       - uses: actions/checkout@v2
         with:
