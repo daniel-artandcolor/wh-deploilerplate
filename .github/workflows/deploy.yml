@@ -28,4 +28,5 @@ jobs:
           username: ${{secrets.FTP_USERNAME}}@${{secrets.FTP_SERVER}}
           password: ${{secrets.FTP_PASSWORD}}
           local-dir: ./_site/
+          state-name: ./.ftp-deploy-sync-state.json
           # server-dir: '/' # optional subdir, must end in /
